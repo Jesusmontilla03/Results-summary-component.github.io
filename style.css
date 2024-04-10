@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Primary */
+
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    
+    /* Gradients */
+    
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+    
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+    
+     /* Neutral */
+    
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+/*---------------- MOBILE DESIGN -----------*/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+section {
+    width: 100%;
+    margin-bottom: 24px;
+}
+.result-container {
+    width: 100%;
+    background: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    border-radius: 0 0 32px 32px;
+    padding: 20px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result-container:hover {
+    box-shadow: 2px 2px 10px 1px var(--Light-slate-blue-background);
+}
+.result-container h2:nth-child(1) {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--Light-lavender);
+    margin-bottom: 24px;
+}
+.big-number {
+    width: 130px;
+    height: 130px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, var(--Persian-blue-circle), var(--Violet-blue-circle));
+    margin-bottom: 24px;
+
+    & h1 {
+        color: var(--White);
+        font-size: 2.8rem;
+    }
+    & span {
+        color: var(--Light-lavender);
+        opacity: 0.6;
+        font-weight: 500;
+        font-size: 0.85rem;
+    }
+}
+.big-number:hover {
+    box-shadow: 0 0 10px 2px var(--Light-slate-blue-background);
+}
+.result-container h2:nth-child(3) {
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.result-container p {
+    width: 260px;
+    color: var(--Light-lavender);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+.summary-container {
+    padding: 24px;
+}
+.summary-container h4 {
+    font-size: 1.24rem;
+    color: var(--Dark-gray-blue);
+    margin-bottom: 24px;
+}
+.item-summary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    margin: 16px 0;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1.11rem;
+    cursor: pointer;
+}
+.item-summary:hover {
+    box-shadow: 1px 1px 8px 1px;
+}
+.item-summary p:nth-child(1) {
+    display: flex;
+    gap: 12px;
+}
+.item-summary p:nth-child(2) {
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+    & span {
+        font-weight: 700;
+        opacity: 0.6;
+        margin-left: 2px;
+    }
+}
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.08);
+    color: var(--Light-red);
+}
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.08);
+    color: var(--Orangey-yellow);
+}
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.08);
+    color: var(--Green-teal);
+}
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.08);
+    color: var(--Cobalt-blue);
+}
+.continue-button {
+    width: 100%;
+    border-radius: 50px;
+    background-color: var(--Dark-gray-blue);
+    border: none;
+    color: var(--Pale-blue);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 15px 0;
+    margin-top: 12px;
+}
+.continue-button:hover {
+    background: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+}
+footer {
+    position: absolute;
+    bottom: 2px;
+    font-size: 0.84rem;
+    background: linear-gradient(to right, var(--Light-slate-blue-background), var(--Green-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    & a {
+        font-weight: 650;
+        text-decoration: none;
+    }
+    & a:hover {
+        font-weight: 950;
+    }
+}
